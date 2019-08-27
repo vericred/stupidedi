@@ -117,7 +117,7 @@ module Stupidedi
                 b::Segment(200, s::REF, "Member Supplemental Identifier", r::Situational, d::RepeatCount.bounded(13),
                   b::Element(e::Required,    "Reference Identification Qualifier", b::Values("17", "23", "3H", "4A", "6O", "ABB", "D3", "DX", "F6", "P5", "Q4", "QQ", "ZZ")),
                   b::Element(e::Required,    "Member Supplemental Identifier", b::MaxLength(50)),
-                  b::Element(e::NotUsed,     "Description"),
+                  b::Element(e::Situational, "Description"),
                   b::Element(e::NotUsed,     "REFERENCE IDENTIFIER")),
                 b::Segment(250, s::DTP, "Member Level Dates", r::Situational, d::RepeatCount.bounded(24),
                   b::Element(e::Required,    "Date Time Qualifier", b::Values("050", "286", "296", "297", "300", "301", "303", "336", "337", "338", "339", "340", "341", "350", "351", "356", "357", "383", "385", "386", "393", "394", "473", "474")),
